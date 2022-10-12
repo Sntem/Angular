@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { HttpClientModule } from '@angular/common/http';
+import {UserService} from "./users/user.service";
+import {PostService} from "./posts/post.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,9 +24,11 @@ import {AppRoutingModule} from "./app-routing.module";
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService,PostService],
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }

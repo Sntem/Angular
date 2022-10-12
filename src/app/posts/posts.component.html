@@ -1,1 +1,37 @@
-<p>posts works!</p>
+<div class="container">
+  <div class="row">
+    <div class="offset-2 col-xs-12 col-md-8 mt-5">
+      <h2 class="offset-5"> Take a look</h2>
+      <ul class="list-group" *ngFor="let postToRender of postsToRender">
+        <li class="list-group-item mt-3">
+          <h3>{{postToRender.title}}</h3>
+        </li>
+        <li class="list-group-item">
+          {{postToRender.content}}
+        </li>
+      </ul>
+    </div>
+    <div class="offset-2 col-xs-12 col-md-8 mt-5">
+      <h3>Wanna create yours?</h3>
+      <form   #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+          <div class="form-group">
+            <div class="row" >
+            <div class="col">
+              <input type="text" ngModel name="firstName" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+              <input type="text" ngModel name="lastName" class="form-control" placeholder="Last name">
+            </div>
+            <div class="col">
+              <input type="email"  ngModel name="email" class="form-control" placeholder="Email" email required>
+            </div>
+          </div>
+        <input class="form-control mt-5" ngModel name="title" placeholder="Title" >
+        <input class="form-control mt-2" ngModel name="content" placeholder="Express yourself!" >
+        <button class="btn btn-dark mt-3" >Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,24 @@
-
 <div class="container">
   <div class="row">
-    <div  class="col-xs-5 col-md-5 col-lg-5 ">
-      <p>users works!</p>
+    <div class="table-responsive mt-5">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users; let i=index;">
+          <td>{{i + 1}}</td>
+          <td> {{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
