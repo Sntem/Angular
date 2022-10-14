@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<div class="backdrop" (click)="onClose()"></div>
+  <div class="row _modal">
+    <span><fa-icon [icon]="faUser"></fa-icon>Email
+    <input  ngModel name="email" type="email" class="input-group rounded-3">
+      </span>
+    <span><fa-icon [icon]="faLock"></fa-icon>Password
+    <input ngModel name="password" type="password" class="input-group rounded-3">
+      </span>
+    <div class="mt-2">
+      <button class="btn btn-success float-start" type="Submit">Log in</button>
+      <button class="btn btn-primary  float-end" (click)="onClose()">Close</button>
+    </div>
+  </div>
+</form>
+
+

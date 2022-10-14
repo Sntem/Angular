@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {faHomeLg, faSignIn, faPager, faUsers} from '@fortawesome/free-solid-svg-icons'
 
 
@@ -9,11 +9,15 @@ import {faHomeLg, faSignIn, faPager, faUsers} from '@fortawesome/free-solid-svg-
 })
 export class HeaderComponent implements OnInit {
 
-faHomeLg1= faHomeLg;
+  faHomeLg1 = faHomeLg;
   faUsers = faUsers
   faPost = faPager
   faSignIn = faSignIn;
-  constructor() { }
+
+  showModal:boolean=false
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

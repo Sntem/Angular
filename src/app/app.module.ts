@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {UserService} from "./users/user.service";
 import {PostService} from "./posts/post.service";
 import {FormsModule} from "@angular/forms";
+import {ModalComponent} from "./shared/modal/modal.component";
+import {AuthService} from "./shared/auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -19,16 +21,17 @@ import {FormsModule} from "@angular/forms";
     UsersComponent,
     PostsComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [UserService,PostService],
+  providers: [UserService,PostService,AuthService],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }
